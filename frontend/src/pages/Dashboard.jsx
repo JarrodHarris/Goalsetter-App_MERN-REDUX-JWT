@@ -6,7 +6,6 @@ import GoalForm from '../components/GoalForm'
 import GoalItem from '../components/GoalItem'
 import Spinner from '../components/Spinner'
 import { getGoals } from '../features/goals/goalSlice'
-//reset should maybe be called from authSlice
 import { reset } from '../features/auth/authSlice'
 
 function Dashboard() {
@@ -25,7 +24,6 @@ function Dashboard() {
             navigate('/login')
         }
         else {
-            console.log("getting goals")
             dispatch(getGoals())
         }
 
